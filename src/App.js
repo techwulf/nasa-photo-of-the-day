@@ -1,13 +1,17 @@
 import React from "react";
 import "./App.css";
+import {apiKey, apod} from './constants';
+
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Header /> 
+      <Content />
+      <Footer />
     </div>
   );
 }
