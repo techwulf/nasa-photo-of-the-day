@@ -16,14 +16,15 @@ function App() {
         setNasa(res.data);
       })
       .catch(err => {console.error(err)});
-  })
+  },[]);
 
   return (
     <div className="App">
       <Header /> 
-      {nasa && <>
-      <Content photo={nasa.url} title={nasa.title} text={nasa.explanation}/>
-      <Footer copyright={nasa.copyright} date={nasa.date}/>
+      {nasa && 
+      <>
+        <Content photo={nasa.url} title={nasa.title} text={nasa.explanation}/>
+        <Footer copyright={nasa.copyright} date={nasa.date}/>
       </>
       }
     </div>
